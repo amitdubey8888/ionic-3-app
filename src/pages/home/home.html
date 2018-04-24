@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle class="header-icons">
+        <ion-icon name="menu" menuToggle></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title class="page-title"><img src="assets/imgs/lawctopus-1.jpg" style="width:40%; height:30px"></ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only class="header-icons" (click)="goToSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-slides>
+
+    <ion-slide *ngFor="let category of common.categories">
+      <div class="img-container">
+        <img [src]="common.images[posts[category.id] ? posts[category.id][0]['id'] : ''] || 'assets/imgs/transparent.png'" class="img">
+        <div class="selectedCategory">
+          <span>{{category.name}}</span>
+        </div>
+      </div>
+
+      <div class="content-list">
+        <ion-grid>
+          <ion-row *ngFor="let post of common.categoriesPosts[category.id]; let i = index">
+            <ion-col col-3 style="padding:0">
+              <ion-thumbnail item-start>
+                <img [src]="common.images[post.id] || 'assets/imgs/transparent.png'" class="img-thumb">
+              </ion-thumbnail>
+            </ion-col>
+            <ion-col col-9 class="content-details" (click)="goToPost(category, i)" style="padding-top:0">
+              <h4 text-left>{{ post.title.rendered }}</h4>
+              <p text-right>{{post.date | date : 'dd MMM yyyy'}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>

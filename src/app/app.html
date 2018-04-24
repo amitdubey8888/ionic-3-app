@@ -1,0 +1,78 @@
+<ion-menu [content]="content">
+  <ion-content class="menu-content">
+    <img src="assets/imgs/logo-normal.png" class="logo-sidenav">
+    <div class="segment-header">
+      <ion-segment [(ngModel)]="segment">
+        <ion-segment-button value="categories">
+          Categories
+        </ion-segment-button>
+        <ion-segment-button value="settings">
+          Settings
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div [ngSwitch]="segment">
+      <ion-list *ngSwitchCase="'categories'">
+        <button class="menu-item" menuClose ion-item (click)="goToPost({id:1}); selectedOption = ''">
+          Latest Posts
+        </button>
+        <div *ngFor="let menu of sideMenu?.items">
+          <button class="menu-item" *ngIf="menu.title !=='Home' && menu.title !=='Knowledge Base'" ion-item (click)="selectedOption = (selectedOption === menu.title ? '' : menu.title)">
+            {{menu.title}}
+            <ion-icon name="arrow-dropdown" style="float:right"></ion-icon>
+          </button>
+
+          <ion-list *ngIf="selectedOption === menu.title" style="margin-left: 20px">
+            <ion-item (click)="goToPost(menu)" menuClose>All</ion-item>
+            <ion-item *ngFor="let subMenu of menu.children" menuClose (click)="goToPost(subMenu)">{{subMenu.title}}</ion-item>
+          </ion-list>
+        </div>
+        <button class="menu-item" menuClose ion-item (click)="goToPage('DeadlinesPage'); selectedOption = ''">Upcoming deadlines</button>
+        <button class="menu-item" menuClose ion-item>Advanced Search</button>
+
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'settings'">
+
+        <button class="menu-item" menuClose ion-item (click)="shareApp()">
+          Share this app
+        </button>
+        <button class="menu-item" menuClose ion-item (click)="rateApp()">
+          Rate this app
+        </button>
+        <button class="menu-item" menuClose ion-item (click)="sendFeedback()">
+          Send feedback
+        </button>
+        <button class="menu-item" menuClose ion-item (click)="goToSocial('https://twitter.com/Lawctopus/')">
+          Follow us on Twitter
+        </button>
+        <button class="menu-item" menuClose ion-item (click)="goToSocial('https://www.facebook.com/Lawctopus/')">
+          Like us on Facebook
+        </button>
+        <button class="menu-item" menuClose ion-item (click)="goToSocial('https://www.linkedin.com/company/1263871/')">
+          Connect with us on Linkedin
+        </button>
+        <button class="menu-item" menuClose ion-item (click)="subscribeNewsLetter()">
+          Subscribe Newsletter
+        </button>
+        <button class="menu-item" menuClose ion-item (click)="goToPage('ContactPage')">
+          Contact Us
+        </button>
+        <button class="menu-item" menuClose ion-item (click)="goToPage('PrivacyPage')">
+          Privacy Policies
+        </button>
+        <button class="menu-item" menuClose ion-item (click)="goToPage('TermsPage')">
+          Terms and Conditions
+        </button>
+        <button class="menu-item" menuClose ion-item (click)="goToPage('AboutPage')">
+          About Us
+        </button>
+      </ion-list>
+    </div>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

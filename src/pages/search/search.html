@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-searchbar [(ngModel)]="myInput" autofocus="on" animated="true" [showCancelButton]="shouldShowCancel" (keyup)="onInput($event)" (ionCancel)="onCancel($event)">
+    </ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <p *ngIf="message">{{message}}</p>
+  <div class="content-list">
+    <ion-grid>
+      <ion-row *ngFor="let post of posts; let i = index">
+        <ion-col col-3 style="padding:0">
+          <ion-thumbnail item-start>
+            <img [src]="common.images[post?.id] || 'assets/imgs/transparent.png'" class="img-thumb">
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col col-9 class="content-details" (click)="goToPost(post)" style="padding-top:0">
+          <h4 text-left>{{ post?.title.rendered }}</h4>
+          <p text-right>{{post?.date | date : 'dd MMM yyyy'}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

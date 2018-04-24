@@ -1,0 +1,126 @@
+page-posts {
+    .header {
+        // background: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        z-index: 9999;
+        width: 100%;
+        box-shadow: none;   
+        color: #ed702b;             
+    }
+
+    .header ion-icon {
+        font-size: 25px;
+        color: #ed702b;
+        background: transparent;
+        // padding: 3px 6px;
+        margin-top: 8px;
+        // margin-left: 8px;
+    }
+
+    .header h3,
+    .header h6 {
+        padding: 0;
+        margin: 0;
+        color: #e2e2e2;
+        text-align: right;
+        font-family: 'Oswald', serif;
+
+    }
+    .img {
+        z-index: 1;
+        width: 100%;
+        height: 250px;
+        background-image: url('../assets/imgs/lawctopus-2.jpg'); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .selectedCategory {
+        text-align: right;
+        font-size: 20px;
+        padding: 10px;
+    }
+    .post-title h4{
+        font-family: 'Oswald', serif; 
+        font-weight: 500;   
+        letter-spacing: .5px;
+        font-size: 18px;
+        line-height: 1.3em;
+        color: #555;
+        text-align: justify;    
+    }
+    
+    .content-list ion-row {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .content-list h4 {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 1.5em;
+    }
+    .content-list p {
+        margin: 5px 0 0 0;
+        color: #777;
+        font-size: 12px !important;
+    }
+    .content-details {
+        border-bottom: 1px solid gray;
+    }
+    .content-list ion-badge {
+        border-radius: 50%;
+        padding: 5px 8px;
+        margin-top: 10px;
+    }
+    // ion-slides {
+    //     height: auto;
+    // }
+    ion-slides { height: initial; }
+    .cross-border-container {
+        position: relative;
+    }
+    .cross-border {
+        position: absolute;
+        bottom: 100%;
+        border-width: 35px 190px;
+        border-style: solid;
+        border-color: transparent transparent #fff #fff;
+    }
+    .about {
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+        color: #000;
+    }
+    .date {
+        padding: 0;
+        margin: 0;
+        margin-top: 7px;
+        font-size: 13px;
+        color: #999;
+    }
+
+    .content{
+        padding-top: 0px !important;
+        font-family: 'Libre Baskerville', serif;        
+        // height: 100%; 
+    }
+    .content p, li{
+        font-size: 13px;
+        letter-spacing: 0.3px;
+        line-height: 1.9rem;
+        text-align: justify;
+        color: #666;
+    }
+    strong, b{
+        color: #666;
+    }
+    .content h1, h2, h3, h4, h5, h6{
+        font-family: 'Oswald', serif;        
+    }
+    .content a{
+        color: #ed702b;
+    }
+}

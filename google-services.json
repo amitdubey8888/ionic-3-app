@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "225130845416",
+    "firebase_url": "https://lawctopus-c4864.firebaseio.com",
+    "project_id": "lawctopus-c4864",
+    "storage_bucket": "lawctopus-c4864.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225130845416:android:385d6b3ed4e39da7",
+        "android_client_info": {
+          "package_name": "com.lawctopus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225130845416-e6mvpn0uq43ajouqucsmsu6usrierbio.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lawctopus",
+            "certificate_hash": "b689722b084189bebbeadb41cf8357db8976f7c5"
+          }
+        },
+        {
+          "client_id": "225130845416-dj5lgmia05490ov1sih2seobvsgilpn8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD4kcIl46TTaKhR9eC2x9uyesK0zgavL0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225130845416-dj5lgmia05490ov1sih2seobvsgilpn8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

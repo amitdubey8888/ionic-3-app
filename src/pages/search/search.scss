@@ -1,0 +1,69 @@
+page-search {
+    .searchbar-md .searchbar-input{
+        // background: #ed702b;
+        // color: #fff;
+        // padding: 6px 15px;
+        box-shadow: none;
+    }
+    input::placeholder{
+        // color: #fff;
+    }
+
+    
+
+    .searchbar-md .searchbar-search-icon, .searchbar-md .searchbar-md-cancel{
+        display: none;
+        color: #666;
+    }
+    .searchbar-md .searchbar-md-cancel{
+        display: block;
+        left: 0;
+    }
+    .searchbar-md .searchbar-md-cancel .button-inner{
+        font-size: 20px;
+    }
+    .back-button.show-back-button {
+        display: none;
+    }
+
+    .img-thumb{
+        width: 100%;
+        height: 80px;
+        background-image: url('../assets/imgs/lawctopus-2.jpg'); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .content-list ion-row{
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .content-list h4{
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 1.5em;
+        letter-spacing: .5px;
+        font-weight: 300;
+        font-family: 'Oswald', serif;
+    }
+    .content-list p{
+        margin: 5px 0 0 0;
+        color: #999;
+        font-size: 12px;
+    }
+
+    .content-details{
+        // border-bottom: 1px solid gray;
+    }
+
+    .content-list ion-badge{
+        border-radius: 50%;
+        padding: 5px 8px;
+        margin-top:10px;
+    }
+
+}

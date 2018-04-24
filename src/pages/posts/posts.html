@@ -1,0 +1,33 @@
+<ion-content>
+  <ion-slides>
+
+    <ion-slide *ngFor="let post of posts; let i = index;">
+      <div class="header">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4 text-left>
+              <ion-icon name="arrow-back" navPop></ion-icon>
+            </ion-col>
+            <ion-col col-8 text-right>
+              <ion-icon name="share" (click)="sharePost(post)"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <img [src]="common.images[post.id] || 'assets/imgs/transparent.png'" class="img">      
+      <div class="post-title" text-left padding>
+        <h4>{{post.title.rendered}}</h4>
+        <p class="about">Lawctopus News Network</p>
+        <p class="date">{{post.date | date : 'dd MMM yyyy'}}</p>
+      </div>
+
+      <div>
+        <div class="content" text-left padding [innerHTML]="post.content.rendered">
+        </div>
+      </div>
+
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>

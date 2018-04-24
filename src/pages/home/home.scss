@@ -1,0 +1,89 @@
+page-home {
+    @import url('https://fonts.googleapis.com/css?family=Merriweather:700');
+
+
+
+    .img{
+        z-index: 1;
+        width:100%;
+        height: 250px;
+        background-image: url('../assets/imgs/lawctopus-2.jpg'); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .img-container{
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .selectedCategory{
+        position: absolute;
+        right: 0px;
+        bottom: 5px;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top:-10px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        text-align: center;
+        padding-top:10px; 
+        font-family: 'Oswald', cursive;
+        width: 100%;
+        height: 50px;
+        background: #ed702b;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to rgba(0,0,0,0.4),rgba(0,0,0,0.3), rgba(0,0,0,0.2), rgba(0,0,0,0.1));  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, rgba(0,0,0,0.4),rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    .img-thumb{
+        width: 100%;
+        height: 80px;
+        background-image: url('../assets/imgs/lawctopus-2.jpg'); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+    .content-list ion-row{
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .content-list h4{
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 1.5em;
+        letter-spacing: .5px;
+        font-weight: 300;
+        font-family: 'Oswald', serif;
+    }
+    .content-list p{
+        margin: 5px 0 0 0;
+        color: #999;
+        font-size: 12px;
+    }
+
+    .content-details{
+        // border-bottom: 1px solid gray;
+    }
+
+    .content-list ion-badge{
+        border-radius: 50%;
+        padding: 5px 8px;
+        margin-top:10px;
+    }
+
+    ion-slides {
+        height: auto;
+    }
+
+    
+}

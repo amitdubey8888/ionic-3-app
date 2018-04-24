@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+
+ion-navbar {
+}
+.toolbar-md{min-height: auto;}
+.toolbar-background-md{
+    background: transparent;
+}
+.toolbar-title-md{
+    // color: #f2f2f2 !important;     
+}
+.header{
+    box-shadow: 0px 0px 15px 0px darkslategrey; 
+    color:#fff;       
+}
+.button-inner{
+    color:#ed702b;
+    font-size: 13px;
+}
+.page-title{
+    text-align: center;
+    font-family: 'Oswald', serif;
+    letter-spacing: 2px;   
+}
+.header-icons{
+    font-size: 17px;
+    margin-top: 5px;
+    // color: #f2f2f2;
+}
+
+.label-md {
+    margin: 13px 8px 13px 0;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #777;
+    font-family: fantasy;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.menu-inner {
+    width: 220px;
+    // background: rgba(0, 0, 0, 0.5) !important;
+    background: #f2f2f2;
+}
+
+.menu-content {
+    background: inherit !important;
+}
+
+.menu-content .menu-item .item-inner {
+    border: none;
+}
+
+.menu-content .menu-item,
+.menu-content ion-item {
+    background: transparent;
+    // color: #fff;
+    color:#444;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.menu-content ion-item-divider {
+    background: #ed702b;
+    font-size: 20px;
+    color: #e3e3e3;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Oswald', serif;
+}
+
+.item-inner{
+    border-bottom: 0 !important;
+}
+
+.segment-header {
+    background: #222;
+    background: #ed702b;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    letter-spacing: 1px;
+    // margin-right: 10px;
+}
+
+.segment-header .segment-button {
+    color: #fff;
+    border-color: #fff;
+}
+
+.segment-button:active {
+    border-color: #fff;
+}
+
+.logo-sidenav {
+    width: 100%;
+    background: #fff;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
